@@ -1,0 +1,48 @@
+************git class 03*********************
+what is a version?
+a version is an update in your code.
+any changes makes a new version of it.
+version control system---> VCS ---> GIT
+what is GIT?
+Git is a version control tool.
+It help us to manage our versions efficiently.
+Other popular VCS?
+1. GIT
+2. SVN
+3. CVS
+4. Bazaar
+What is github?
+It is a remote Repository.
+what is a Remote repository?
+It is a central place on the cloud(internet) where data is stored and
+managed.
+Advantages of github?
+We can work on the collobration in the same project.
+
+please do not create a repo within a repo
+
+pwd
+cd
+ls
+ than-------
+
+ Command 01 -
+ git init: initialize a repo.
+
+ *****stage architecture:
+ 1.Working directory : all the files that you have in your project inside this
+ 2.Staging area : An area between repo and working directory here the snapshot of all the files are moved before actually
+ moving them to repo.
+ 3.Repository : our actual storing area
+
+ Command 02 -
+ git status : tells the status of repo,
+ .untracked files
+ .files that are in staging area but not in repo yet!
+ .it doesnt tell us about files in staging area which are also in repo!
+ .untracked --> apperars in red
+ .tracked --the one in staging area appears in green color
+
+
+
+

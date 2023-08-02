@@ -8,6 +8,7 @@ public class GitBasics {
 
         System.out.println("ı am again corrected code");
         System.out.println("ı am after commit code");
+        System.out.println("deneme");
 
     }
 }

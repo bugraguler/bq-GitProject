@@ -37,9 +37,10 @@ ls
 
  Command 02 -
  git status : tells the status of repo,
- .untracked files
+ .untracked files - which is not in staging area
  .files that are in staging area but not in repo yet!
  .it doesnt tell us about files in staging area which are also in repo!
+
  .untracked --> apperars in red
  .tracked --the one in staging area appears in green color
 

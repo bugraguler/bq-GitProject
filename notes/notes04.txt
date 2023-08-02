@@ -47,6 +47,9 @@ Command 03 -
 git add .
 adds everything to the staging area
 
+git add filename
+adds the specific file
+
 Command 04 -
 git commit -m "commit here"
 sends everything in the staging area to the repo
@@ -63,6 +66,22 @@ you need to do these steps if you dont change your repo
 
 5.git push -u origin main -->use is first time only
 6.after that u can do git push only
+
+7.git log shows all the commits in local repo*
+Head--> points to the latest commit that presents in your working directory.
+origin maim --> points to the commit in your local repo uptil which your remote repo is syncronised
+
+extra git commands:
+1.git ls-files:
+show u the files that are present in the staging area.
+
+*you can not override a file in staging area. git is going to tell that u already have some
+changes in your staging area that needs to be in the repo.
+
+2.git rm --cached filename:
+removes file form staging area
+
+
 
 
 -----------------------------------------------------------------------

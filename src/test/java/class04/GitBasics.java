@@ -5,5 +5,7 @@ public class GitBasics {
         System.out.println("Git first print");
         System.out.println("Git second print");
         System.out.println("Git first print");
+
+        System.out.println("ı am again corrected code");
     }
 }

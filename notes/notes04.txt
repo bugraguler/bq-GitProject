@@ -85,15 +85,37 @@ removes file form staging area
 3.git diff:
 shows u the difference between the files in working directory and the staging area!!
 
-3.git diff --cached:
+4.git diff --cached:
 shows u the difference between the files in repo and the staging area!!
 
+5.git restore .
+to move your files from staging area to working directory
+
+.gitignore file
+helps u ignore the files/folders that u dont want to track
+remember !! if u are already tracking  that file/folder , .gitignore will not ignore it
+thats why if u want to ignore a file/folder do it at the very start, before adding that folder in staging area
+
+1. touch .gitignore
+2. open this file add the name of the file or folder u want to ignore
+3 save the .gitignore(txt) file
+you will not see it anymore in git status
+
+to get code from a remote repo:
+1.clone
+2.download zip
+
+-the difference is that if u download the code u just download the latest commit that is there but when
+u clone it, it download whole repo along with that.(all previous commits are also included).
+-if u clone u can update the repo using git commanda
+-if u download u cant update the repo!
+
+git clone:
+git clone URL
+make sure the url is "HTTPS" not "SSH" .
 
 
 
-
-
------------------------------------------------------------------------
 
 
 

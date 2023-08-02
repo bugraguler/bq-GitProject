@@ -43,6 +43,29 @@ ls
  .untracked --> apperars in red
  .tracked --the one in staging area appears in green color
 
+Command 03 -
+git add .
+adds everything to the staging area
+
+Command 04 -
+git commit -m "commit here"
+sends everything in the staging area to the repo
+
+GitHub:
+For each local repo you must have individual repo
+
+1.Create a new remote repo.
+2.On your terminal git remote  -v to check for any connections(if empty shows no connections yet)
+3.git remote add origin url
+4.git brach -M main (naming your branch)
+
+you need to do these steps if you dont change your repo
+
+5.git push -u origin main -->use is first time only
+6.after that u can do git push only
+
+
+-----------------------------------------------------------------------
 
 
 

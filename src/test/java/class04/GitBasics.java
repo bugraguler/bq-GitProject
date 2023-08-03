@@ -14,5 +14,7 @@ public class GitBasics {
         System.out.println("git diff --cached anlamaya çalış");
         System.out.println("changes to teamlead");
 
+        System.out.println("hey lead this is for u");
+
     }
 }

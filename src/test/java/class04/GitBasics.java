@@ -16,5 +16,7 @@ public class GitBasics {
 
         System.out.println("hey lead this is for u");
 
+        System.out.println("heyyy ı made a new thing 03.08");
+
     }
 }

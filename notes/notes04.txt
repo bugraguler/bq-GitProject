@@ -114,6 +114,14 @@ git clone:
 git clone URL
 make sure the url is "HTTPS" not "SSH" .
 
+git fetch:
+tells u if there is any update in remote repo.
+
+git pull:
+it will download the latest update from remote repo
+
+
+
 
 
 

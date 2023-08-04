@@ -1,0 +1,14 @@
+***** Class 07 *****
+
+to merge a branch:
+step 1: switch to the branch to which u want to merge
+step2: run the command "git merge branchname" where branchname is the name of the branch u want to merge
+
+git branch -a:
+list all the branches that are there on github.
+
+git checkout branchname:
+will change the scope and also if you clone it will download it
+
+
+

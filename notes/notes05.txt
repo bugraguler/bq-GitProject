@@ -1,0 +1,18 @@
+***** Class 05 *****
+
+Stashing:
+Temporary saving your code in thr stashing area for future use
+1.Stashing places the changes in your files to the stashing area
+2.The working directory now contains the code from last commit in the repo
+
+git stash -m "notes"
+ stash notes eksik !!!!!!!
+
+
+Branching :
+
+1.Scenario:
+Create a basic structure of solat system and deploy it ASAP
+
+2.Scenario
+Update the feature sun

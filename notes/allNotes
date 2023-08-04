@@ -1,0 +1,465 @@
+What is a Version?
+Each update or change in our code creates a new version.
+There are different conventions of naming the version
+e.g V0, V0.1, V0.2
+V0, V1 ,V2
+V0, V0.1 ,V1,V1.1< V1.2
+
+
+Why do we need GIT?
+We need GIt to make our life easy
+It helps us to manage our versions on a our laptop locally!
+
+If we donot use git then
+it gets very hard to manage all the versions
+the space consumed is also big
+and its hard for us to find any code because they are not properly managed.
+
+
+
+●	We learned why do we need Git and Github and how it makes our life easy and helps us work together in collaboration
+○	Git is just one of the VCT, there are other popular SVN
+○	Why to use GIT? —> to collaborate with teams
+○	When you work in a team on the same file/project —> it is very helpful and useful
+○	Git is an open source
+
+
+IN order to create a repository in the folder we need to
+1.Open up the gitbash or terminal
+2.We want to navigate our terminal/gitbash to that particular folder
+
+
+
+TO navigate:
+1.Check the home directory -->home directory is the first directory when we open our terminal.
+command-->PWD(prints the current directory).
+2.To see the path that leads to that folder
+command-->LS(lists all directories in the current directory)
+3.TO move the terminal in that directory
+command-->CD Directory-Name(change the directory)
+4.To move one step back use the
+command cd ..
+5. to move your terminal to the home directory use the command
+cd ~
+
+------------------------------------------------------------------------------------------------------
+
+we created a project of which we want a backup
+
+so the first step after creating the project is
+1.find the location of the project
+2. we need to open terminals
+3.navigate the terminal to the location of our project
+
+to make our first commit
+1.initalize the repository
+git init
+2.git status to check the current state of our repository
+3.add the files in stsging area in order to track them
+staging area is a tmeporary storage between working directory and repostiory
+it takes the snapshot of the files in the working directory and holds them there
+to go in the commit we make
+
+
+4. we want all the files in the staging area to be in the repository
+git commit -m "first commit"
+
+5. to review the commits you have made
+git log
+
+We learned how to make a commit and delete file from the staging area and see files in the staging area
+
+----------------------------------------------------------------------------------------------------------
+
+we created a new java class and entered a template in it
+this class is in the same package
+1.add the file in the staging area
+2.make a commit "the second commit"
+
+now we will learn how we can revert back to the previous commits that we made
+git restore --source commit code "filename"
+
+
+MAC users dont panic we will run this command after the class please
+donot run any other checkout or reset command
+
+after we have moved back to the previous commit
+at this point if we do git status what will be the output
+ as we reverted to the last commit we have some new files in the working directory
+
+
+we made a new commit for those who were having some changes and were
+not able to revert due to some issues ..
+
+
+Github connecting with local
+1.create a new repository
+2.Establish a connection between our local repository and the remote repository
+that we created
+but first we MUST check if there is already a connection or not???
+git remote -v if it returns null output (no connection)
+else it will give us the link of repostiory
+now run git remote add origin URLOFREPO
+
+3.In git we have a tree structure (we will discuss that in future)
+for now we just know that after adding remote (connection) we MUST run
+a command  (git branch -M main)
+4.Everything is good now just type in command
+git push -u origin(name of repo) main(branch)
+
+for those who see a credential key in terminal enter your correct password
+you may not see it while typing
+make sure you type the correct one and press enter it will work
+
+
+learning more git commands
+1. make changes in the first class , any change can be made
+2.git status (it shows file is modify)
+3.git diff (shows difference in the files in working directory
+and the staging area)
+use case of this command (when i have made no changes in working directory,
+but still the git status shows that there are some changes,
+i simply run this command and it shows me change)
+
+4.to see the changes in files in staging area and the last commit
+we have (git diff --staged).
+
+5 make a commit and now you will see
+a red origin main and green head-->main it shows your local
+and remote are not sync
+so in order to sync them we do git push -->
+git push means send the code to Github
+so this time you donot need to do git push -u orign main that is what u need
+to do only once and then after that git push is sufficient
+
+To restore your working directory from what is in staging area
+you have the command
+git restore .  or git restore filename
+
+
+
+Some common mistakes:
+1.not being at the right folder ...
+make sure that you are in the folder where you want to create the repository (i.e where your codes are)
+2.Multiple local repos (one within another)
+3.Forgetting to add things in staging area and trying to make a commit directly
+
+When connecting to a remote
+one local to one remote
+If you have differnet commit history of local and remote
+it will give you an error
+.........
+
+Quick tips:
+Every time you create a new local repository you will have to do follwoing
+for individual repo only once
+1.connect each individual to unique remote repo(git remote add origin , git branch -M main)
+
+2.git push -u origin main
+
+then you can simply use git push and its all good
+
+Remember if you close your git bash or terminal
+it doesnot make any difference , you can reopen them and start from where
+you left offf
+
+--------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------- RECAP   --------------------------------------
+MAKING A COMMIT IN LOCAL repository
+1. To locate what you want to back up
+2. To locate where to create the repository(its best to always create
+repository inside the project folder to have all the dependencies and
+pom files also in bakcup)
+3. Navigate my terminal to the folder where i want to create the
+repository
+4. create a repository using git init
+5. git status to check which files are there to be added to commit
+6. git add . to add all files in staging area or use git add "filename"
+to add particular file to staging area
+7. if the file is not in staging area then it is untracked
+8. git commit -m "message" to make the COMMIT
+
+
+
+--------------------------------------------Extra powerful git commands----------------------------------------------------
+
+1. git log --> to view commits that have been made
+2. git ls-files -->to view files in the staging area
+3. git rm --cached filename to remove file from staging area only
+4. git rm "filename" delete the file from both staging area and directory
+5. git restore . or git restore "filename" moves file from staging area
+to your working directory
+use this command if you made a mistake and want to go back to file that
+you have in staging area
+6. git checkout -f move files from last commit from repo to your
+directory
+7. git restore --source commitcode "filename" this command takes you back
+to the previous commits
+8. git diff  shows difference in files in staging area and the working
+directory
+9. git diff -- staged shows difference in files in staging area and the
+repository.
+10. touch .ignore to omit files from our repo which we donot want to
+tracked
+
+
+-------------------------------------git GITHUB-------------------------------------
+
+
+1. create a repository
+2. all repos have a unique link and we use git remote add origin "link"
+to establish that particular link
+3. Specify to which branch on the git hub you want to push your code
+4. git push -u origin main the first time u pus the codes
+the second time just use git push
+
+
+
+-----------------------------------------GIT CLONE------------------------------------
+Git Clone:
+to clone/download the whole repository in your local
+command :git clone URL
+
+git fetch:
+git fetch is used to see that wether there are any changes in the remote
+repository that needs to be updated in local repostiory
+only shows that there is some thing in remote repo that you donot have
+command:git fetch
+
+git pull
+Update the repository with the new commits
+
+NOTE:
+1.if you made a commit in local repo, and some one else updated the remote repo meanwhile
+then you have to pull the remote repo to synch the history of local and remote, only then you will be able to push the code to github
+2.if you made changes in code and now without comitting or adding them in staging area you want to update you repo,
+you wont be able to do so unless you do git stash
+
+vim editor commands:
+press i to insert data to type
+and once you are done typing
+press ESC
+amd type :wq and press enter to save the file
+
+------------------------------------------------------------------------------------------
+---------------------------------------Stashing------------------------------------------------:
+Stashing stores the snapshot of your current file /changes in a separate
+container
+and reverts the condition of your working directory to the last commit (it
+also changes the staging area to last commit)
+
+
+Git and Github should have the same commit history
+There will be a conflict when  there are two different commits at the same
+point in the history
+Stash the previous changes or make a commit before applying a new stash
+
+
+
+-------------------------------------------Important------------------------------------------------- :
+if you have a stash applied and want to apply another stash you must
+"restash " the previous stash and then apply the previous stash
+or instead of re-stashing you can also add it to staging area but this
+will create a merge conflict
+Once you have resolved the merge conflict , if you try to stash the
+changes git will ask you to commit it before that
+But if you donot want to make a commit then what you can do is, add the
+file in the staging area and use git stash to stash the changes
+and revert to last commit.
+
+
+---------------------------------------------------------------------------------
+TAsk:
+stashing untracked untracked files
+git stash -u stashes the untracked files
+git stash -m "message" doesnt stash the untracked files
+
+
+============================================Github and stashing use case================================
+1. Git stash -m "message":  (this command can also be git stash/ git
+stash save "")
+saves a stash with the message
+2. git stash -u:
+stashes the untracked files
+3. git stash list
+list all stashes
+4. git stash apply index number
+applies the stash but doesn't delete it from the stash area
+5. similar to git stash apply we have a command git stash pop
+indexnumber:
+so this command applies the stash and also deletes it from the stashing
+area.
+6. git stash drop indexnumber:
+delete the stashes
+---------------------------------------------------------------------------------------------------------
+  			 Git Class 06
+
+
+Git stashing:
+1.git stash -m "first stash"
+2.git apply numberofApply
+3.git stash list
+
+
+q)what happens when you stash ?
+A)it moves the changes in our working directory to temporary stash area, and it reverts our working directory to the last commit in the repo...
+
+
+Q)What happens if you apply a stash and after that you want to apply another stash ?
+1.in order to apply another stash you have to restash the first one
+
+but but but lets say we donot stash the first one
+then
+it will just give us an error saying you have some chnages in your directory to be commited or stashed!!!
+
+
+Q)what if we apply a stash and then commit it and then we aplly a previous stash again?
+1.when we apply the first stash and commit it, now the working directory will be on the latest commit.....
+
+
+now if we want to apply a previous stash , git will look and say that when this stash was made the state of working dirctory was different!!
+
+
+in some scenarios you might find merge conflict or if there is no conflict then simple merge!!!
+
+
+
+
+
+
+
+				Branches in GIT
+
+Why do we need branches?
+1.not to mess up our main branch
+
+example :
+main branch --> facebook v5.0
+meta--> testing features to be added
+ once they have tested meta
+integrate it with main
+
+Main branch--> fb v5.0 --> meta final feautes added
+
+2.To add more features in our code
+
+3.To fix a bug
+
+
+
+
+		THE  PROJECT  SOLAR SYSTEM
+
+1)To have the basic strucutre of the solar systemReady and deployed.
+Lets quickly deploy this code
+
+git branch -M main
+
+git push -u origin main
+
+
+2)Add the feature of the sun and ping me up when you are done
+
+1.to create a new branch
+  git branch branchname
+2. to switch to that branch
+   git checkout branchname
+
+
+
+Q)once we have switched to anew branch , what is going to be the code in our working directory??
+A)the code will be the same of the commit from wehre  we created a branch
+
+
+** too solve a bug we created a new branch
+
+
+after solving the bug in order to merge the branch follow the following steps
+
+1.switch to the branch to which you want to merge
+2.use git merge "name of branch which you want to merge"
+
+
+FAST FORWARD MERGE:
+git uses fast forward merge if and only if there has been no more commits on the branch from where it was branched out.
+
+
+  merge the branch featureSun on gihtub in main
+1.go to pull request
+2.opena new pull request , assign the branch to which you want to merge and the branch which you want to merge
+3.assign it to people you want
+4.create a pull reuqest
+
+ team lead wil click on pullrequest , open the pull reuest and click on merge
+
+
+
+---------- working on new features--------
+1.work on planet1  ==astranout
+2.work on planet2  ==bastranout
+
+
+
+		1.work on planet1  ==>astranout
+
+				pushed to github
+
+		1.work on planet2  ==>bastranout
+
+				 pushed to github
+
+
+
+---------Integrate the panets to the main branch   			after a review ---------
+1.git branch -a
+ shows all the branches in remote
+ origin/branch name  (appears in red)
+2.git checkout branchname
+to downlaod that branch on ur local
+3.to merge the branch
+switch to the branch to which you want to merge and
+use git merge "name of branch you want to merge"
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------
+
+---------------------------Merge and Merge conflicts----------------------
+-------------------
+1. Fast Forward Merge
+2. Three way Merge
+Example of Solar system
+1. Phase 1
+We deployed the solar system and we did it in Main. 2- commits
+2. Phase 2 was to add features to the sun
+* create a new branch feature sun
+* there was an error in the feature , but we made the coomit with
+comments that there is an error
+* created a new branch issue sun and resolved the error and made the
+commit
+to merge :
+1. first checkout to branch to which we want to Merge
+2. to type in command git merge branch name
+phase 3 of the project:
+3. members are wokring on the same project and
+they are goven two differnet task
+1. One memeber is to add specifications for planet 1
+2. Second member is to add sepcs for planet 2
+when we clone the remote repo we see just the main branch
+in order to have all remote branches do git branch -a
+and git chkecout branch name to have that particular branch in git
+
+
+
+Use git log --graph --decorate --oneline command to see the branches
+git merge --no-ff <branch> to stop a fast forward merge and it will doa recursive merge which will need you to make another new commit
+
